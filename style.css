@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope';
+}
+.card{
+    display: flex;
+}
+.card-preview{
+    position: relative;
+    height: 100vh;
+    width: 500px;
+    background: url('images/bg-main-desktop.png') no-repeat;
+}
+.card-front{
+    width: 400px;
+    height: 200px;
+    background: url('images/bg-card-front.png') round;
+    color: white;
+}
+.card-back{
+    background: url('images/bg-card-back.png') round;
+    width: 400px;
+    height: 200px;
+}
+.circle-design{
+    display: flex;
+    align-items: center;
+}
+.card-number{
+    margin-left: 30px;
+    letter-spacing: 2px;
+}
+.card-other{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.card-back{
+    color: white;
+    position: relative;
+}
+.card-cvv{
+    position: absolute;
+    top: 90px;
+    right: 50px;
+}
+.card-form{
+    position: relative;
+    height: 100vh;
+    flex-grow: 1;
+    width: 500px;
+}
+.form-class{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.exp-cvv{
+    display: flex;
+}
