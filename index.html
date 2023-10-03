@@ -45,16 +45,15 @@
                   Cardholder Name
                 </label>
               </div>  
-              <input type="text" id="holder-name" placeholder="e.g. Jane Appleseed">
+              <input type="text" id="holder-name" name="holderName" placeholder="e.g. Jane Appleseed" required>
             </div>
             <div>
               <div>
                 <label for="card-num">
-
                   Card Number
                 </label>
               </div>
-              <input type="tel" id="card-num" placeholder="e.g. 1234 5678 9123 0000">
+              <input type="tel" id="card-num" name="cardNumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="16" required>
             </div>
             <div class="exp-cvv">
               <div class="expiry">
@@ -63,10 +62,10 @@
                   <label for="">Exp. Date (MM/YY)</label>
                 </div>
                 <div> 
-                  <input type="text" name="month" placeholder="MM">
+                  <input type="text" name="month" placeholder="MM" maxlength="2" required>
                 </div>
                 <div>
-                  <input type="text" name="year" placeholder="YY">
+                  <input type="text" name="year" placeholder="YY" maxlength="2" required>
                 </div>
               </div>
               <div class="cvc">
@@ -74,7 +73,7 @@
                   <label for="">CVC</label>
                 </div>
                 <div>
-                  <input type="text" placeholder=" e.g. 123"> 
+                  <input type="text" name="cardcvv" placeholder=" e.g. 123" maxlength="3" required> 
                 </div>
               </div>
             </div>

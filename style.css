@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Space+Grotesk:wght@500&display=swap');    
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Manrope';
+    /* font-family: 'Manrope'; */
+    font-family: 'Space Grotesk', sans-serif;
+
 }
 .card{
     display: flex;
@@ -60,4 +63,14 @@
 }
 .exp-cvv{
     display: flex;
+}
+.form-class input{
+    padding: 10px;
+    margin: 5px;
+}
+input:focus{
+    outline: none;
+}
+.warning{
+    border:1px solid red;
 }
