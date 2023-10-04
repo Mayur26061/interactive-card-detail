@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Interactive card details form</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="container">
     <div class="card">
       <div class="card-preview">
         <div class="card-front">
-          <div class="circle-design">
-            <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
-
-          </div>
-          <div class="card-number">
-            0000 0000 0000 0000
-          </div>
-          <div class="card-other">
-            <div class="card-name">
-              Jane Appleseed
+          <img src="images/bg-card-front.png" alt="">
+          <div class="cdcd">
+            <div class="circle-design">
+              <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff" />
+                <path
+                d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+                stroke="#fff" />
+              </svg>
+              
+            </div>
+            <div class="card-number">
+              0000 0000 0000 0000
+            </div>
+            <div class="card-other">
+              <div class="card-name">
+                Jane Appleseed
             </div>
             <div class="card-date">
               00/00
             </div>
           </div>
         </div>
+      </div>
         <div class="card-back">
+          <img src="images/bg-card-back.png" alt="">
           <div class="card-cvv">
             777
           </div>
-        </div>
       </div>
+    </div>
       <div class="card-form">
         <div class="form-class">
           <form class="form">
@@ -44,7 +56,7 @@
                 <label for="holder-name">
                   Cardholder Name
                 </label>
-              </div>  
+              </div>
               <input type="text" id="holder-name" name="holderName" placeholder="e.g. Jane Appleseed" required>
             </div>
             <div>
@@ -53,7 +65,8 @@
                   Card Number
                 </label>
               </div>
-              <input type="tel" id="card-num" name="cardNumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="16" required>
+              <input type="tel" id="card-num" name="cardNumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="16"
+                required>
             </div>
             <div class="exp-cvv">
               <div class="expiry">
@@ -61,7 +74,7 @@
                 <div>
                   <label for="">Exp. Date (MM/YY)</label>
                 </div>
-                <div> 
+                <div>
                   <input type="text" name="month" placeholder="MM" maxlength="2" required>
                 </div>
                 <div>
@@ -73,7 +86,7 @@
                   <label for="">CVC</label>
                 </div>
                 <div>
-                  <input type="text" name="cardcvv" placeholder=" e.g. 123" maxlength="3" required> 
+                  <input type="text" name="cardcvv" placeholder=" e.g. 123" maxlength="3" required>
                 </div>
               </div>
             </div>
@@ -81,16 +94,33 @@
               <input type="submit" value="Confirm">
             </div>
           </form>
+          <button class="all-card">All Cards</button>
+
         </div>
       </div>
     </div>
-    <!--
-    
-    
-    Thank you!
-    We've added your card details
-    Continue -->
+    <div class="all-cards">
+    </div>
   </div>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "",
+        authDomain: "mydata-3b5f2.firebaseapp.com",
+        projectId: "mydata-3b5f2",
+        storageBucket: "mydata-3b5f2.appspot.com",
+        messagingSenderId: "171300861407",
+        appId: "1:171300861407:web:ab6152519e32d7c640006a"
+      };
+    
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore()
+    </script>
+  <script src="card.js"></script>
   <script src="script.js"></script>
-  </body>
+</body>
+
 </html>

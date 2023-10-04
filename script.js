@@ -3,6 +3,9 @@ const cardNumber = document.querySelector('.card-number');
 const cvv = document.querySelector('.card-cvv');
 const date = document.querySelector('.card-date');
 const holdername = document.querySelector('.card-name');
+const all = document.querySelector('.all-card')
+const allCard = document.querySelector('.all-cards')
+
 const addToUi = (obj)=>{
     debugger;
     cardNumber.textContent = obj.cardNumber;
@@ -62,5 +65,41 @@ form.addEventListener('submit',(ev)=>{
         month: form.month.value,
         year: form.year.value,
     }
+    card.addDetails(obj)
     addToUi(obj)
+    form.reset()
 });
+const addUI = (data)=>{
+    console.log(data)
+    const ele = `<div class="card-front">
+    <img src="images/bg-card-front.png" alt="">
+    <div class="cdcd">
+      <div class="circle-design">
+        <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff" />
+          <path
+          d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+          stroke="#fff" />
+        </svg>
+        
+      </div>
+      <div class="card-number">
+        ${data.cardNumber}
+      </div>
+      <div class="card-other">
+        <div class="card-name">
+        ${data.name}
+      </div>
+      <div class="card-date">
+        ${data.month}/${data.year}
+      </div>
+    </div>
+  </div>`
+  allCard.innerHTML += ele
+}
+all.addEventListener('click',()=>{
+    document.querySelector('.card').style.display = 'none'
+    card.getDetails(addUI)
+})
+let card = new Card()
+// card.getDetails()
