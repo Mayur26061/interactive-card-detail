@@ -6,7 +6,12 @@
     box-sizing: border-box;
     /* font-family: 'Manrope'; */
     font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
 
+}
+label{
+    font-size: .8em;
+    letter-spacing: 1px;
 }
 .card{
     display: flex;
@@ -18,23 +23,21 @@
     background-size:cover;
 }
 .card-front{
-
     width: 350px;
     height: 200px;
-    /* background: url('images/bg-card-front.png') no-repeat;
-    background-size:cover; */
     color: white;
     position: relative;
     margin-bottom: 20px;
+    top: 100px;
+    left: 200px;
+
 }
-.card-back{
-    position: absolute;
-
-    /* background: url('images/bg-card-back.png') no-repeat;
-    background-size:contain; */
-
+.card-show{
     width: 350px;
     height: 200px;
+    color: white;
+    position: relative;
+    margin-bottom: 20px;
 }
 .card-back img{
     width: 100%;
@@ -63,8 +66,12 @@
     padding:0 20px;
 }
 .card-back{
+    top: 100px;
+    left: 300px;
     color: white;
     position: relative;
+    width: 350px;
+    height: 200px;
 }
 .card-cvv{
     position: absolute;
@@ -89,14 +96,23 @@
 .form-class input{
     padding: 10px;
     margin: 5px;
+    border-radius: 7px;
+    width: 300px;
+    border: 1px solid hsl(270, 3%, 87%);
+    text-transform: none;
 }
 input:focus{
     outline: none;
+    border: 1px solid hsl(278, 68%, 11%);
 }
 .warning{
     border:1px solid red;
 }
 .card-front img{
+    width: 100%;
+    height: 100%;
+}
+.card-show img{
     width: 100%;
     height: 100%;
 }
@@ -112,6 +128,90 @@ input:focus{
     /* justify-content: space-between;
     align-items: ; */
 }
+input[type="submit"]{
+    background-color:  hsl(278, 68%, 11%);
+    color: white;
+    padding: 12px;
+}
 button{
+    margin-top: 50px;
     padding: 10px;
+}
+form >div {
+    margin: 20px 0;
+}
+.mm-yy{
+    display: flex;
+}
+.mm-yy input{
+    width: 70px;
+}
+.cvc input{
+    width: 140px;
+}
+@media only screen and (max-width: 1110px) {
+    .card-back{
+        left: 150px;
+    }
+    .card-front{
+        left: 100px;
+    }
+    
+}
+@media only screen and (max-width: 880px) {
+    .card-back{
+        left: 75px;
+    }
+    .card-front{
+        left: 50px;
+    }
+}
+@media only screen and (max-width: 760px) {
+    .card-back{
+        left: 40px;
+    }
+    .card-front{
+        left: 25px;
+    }
+}
+@media only screen and (max-width: 701px) {
+    .card-back{
+        left: 0px;
+    }
+    .card-front{
+        left: 0px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .card{
+        flex-direction: column;
+    }
+    .card-preview{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .card-back{
+        position: absolute;
+        top: 12px;
+        left: 200px;
+    }
+    .card-front{
+        position: absolute;
+        z-index: 2;
+        top: 150px;
+        left: 50px;
+    }
+}
+@media only screen and (max-width: 560px) {
+    .card-back{
+        top: 12px;
+        left: 150px;
+    }
+    .card-front{
+        top: 150px;
+        left: 35px;
+    }
 }

@@ -69,9 +69,10 @@ form.addEventListener('submit',(ev)=>{
     addToUi(obj)
     form.reset()
 });
+
 const addUI = (data)=>{
     console.log(data)
-    const ele = `<div class="card-front">
+    const ele = `<div class="card-show">
     <img src="images/bg-card-front.png" alt="">
     <div class="cdcd">
       <div class="circle-design">
